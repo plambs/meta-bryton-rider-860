@@ -21,3 +21,8 @@ If you want to quickly start to build the core-image-bryton-rider-860 image you 
 ```
 kas build bryton-rider-860.yml
 ```
+Then flash the image on the sdcard
+```
+cd build/tmp/deploy/images/raspberrypi4-64
+sudo bmaptool copy core-image-bryton-rider-860-raspberrypi4-64.wic.bz2 /dev/sdb
+```
