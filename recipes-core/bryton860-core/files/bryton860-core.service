@@ -1,0 +1,12 @@
+[Unit]
+Description=Start bryton860-core application
+After=weston.socket
+
+[Service]
+Environment="XDG_RUNTIME_DIR=/run/"
+Environment="WAYLAND_DISPLAY=wayland-0"
+
+ExecStart=/usr/bin/bryton860-core
+
+[Install]
+WantedBy=multi-user.target
