@@ -32,3 +32,14 @@ repos:
         url: "https://github.com/agherzan/meta-raspberrypi.git"
         refspec: "dacad9302a92b0b7edf8546cdcad1f8ef753e462"
         path: "layers/meta-raspberrypi"
+
+local_conf_header:
+  meta-bryton-rider-860: |
+    DISTRO_FEATURES:append = " pam wayland x11 hwcodecs"
+    # Enable systemd
+    DISTRO_FEATURES:append = " systemd"
+    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+    VIRTUAL-RUNTIME_init_manager = "systemd"
+    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+    # Enable RPI debug uart output
+    ENABLE_UART = "1"
