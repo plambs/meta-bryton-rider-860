@@ -1,8 +1,8 @@
 header:
     version: 11
-distro: poky
+distro: bryton-os
 build_system: oe
-machine: raspberrypi4-64
+machine: bryton-rider-860
 target: core-image-bryton-rider-860
 
 repos:
@@ -10,7 +10,7 @@ repos:
 
     poky:
         url: "git://git.yoctoproject.org/poky"
-        refspec: "d64bef1c7d713b92a51228e5ade945835e5a94a4"
+        refspec: "eaf8ce9d39a2c0d9c42b32fb6596ab4302f93a1a"
         path: "layers/poky"
         layers:
             meta:
@@ -18,7 +18,7 @@ repos:
 
     meta-openembedded:
         url: "https://github.com/openembedded/meta-openembedded.git"
-        refspec: "05dcac98473402d87e0af73bbc2c5a6a840abe93"
+        refspec: "bd2d8fba766f912bd1bc5cde7d6f0e72152f1547"
         path: "layers/meta-openembedded"
         layers:
             meta-oe:
@@ -27,19 +27,3 @@ repos:
             meta-networking:
             meta-multimedia:
             meta-python:
-
-    meta-raspi:
-        url: "https://github.com/agherzan/meta-raspberrypi.git"
-        refspec: "dacad9302a92b0b7edf8546cdcad1f8ef753e462"
-        path: "layers/meta-raspberrypi"
-
-local_conf_header:
-  meta-bryton-rider-860: |
-    DISTRO_FEATURES:append = " pam wayland x11 hwcodecs"
-    # Enable systemd
-    DISTRO_FEATURES:append = " systemd"
-    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-    VIRTUAL-RUNTIME_init_manager = "systemd"
-    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
-    # Enable RPI debug uart output
-    ENABLE_UART = "1"

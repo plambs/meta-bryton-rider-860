@@ -1,8 +1,6 @@
 # Base this image on core-image-base
-require recipes-core/images/core-image-base.bb
+inherit core-image
+LICENSE = "MIT"
 
-IMAGE_FEATURES += "debug-tweaks"
-IMAGE_FEATURES += "ssh-server-openssh"
-
-IMAGE_INSTALL += "wayland weston"
-IMAGE_INSTALL += "bryton860-core"
+IMAGE_INSTALL:append = " wayland weston"
+IMAGE_INSTALL:append = " bryton860-core"
