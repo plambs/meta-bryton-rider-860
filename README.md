@@ -18,7 +18,7 @@ Quick start
 
 If you want to quickly start to build the core-image-bryton-rider-860 image you can use KAS
 ```
-kas build bryton-rider-860.yml
+kas build kas/bryton-rider-860.yml
 ```
 
 Flashing the Bryton860
