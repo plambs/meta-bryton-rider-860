@@ -10,7 +10,7 @@ repos:
 
     poky:
         url: "git://git.yoctoproject.org/poky"
-        refspec: "eaf8ce9d39a2c0d9c42b32fb6596ab4302f93a1a"
+        refspec: "65dafea22018052fe7b2e17e6e4d7eb754224d38"
         path: "layers/poky"
         layers:
             meta:
@@ -18,7 +18,7 @@ repos:
 
     meta-openembedded:
         url: "https://github.com/openembedded/meta-openembedded.git"
-        refspec: "bd2d8fba766f912bd1bc5cde7d6f0e72152f1547"
+        refspec: "278ec081a64e6a7679d6def550101158126cd935"
         path: "layers/meta-openembedded"
         layers:
             meta-oe:
