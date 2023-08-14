@@ -43,7 +43,7 @@ AWUSBFEX soc=00001667(A33) 00000001 ver=0001 44 08 scratchpad=00007e00 00000000 
 
 Running U-Boot
 ```
-sudo sunxi-fel uboot build/tmp/deploy/images/bryton-rider-860/u-boot.bin
+sudo sunxi-fel uboot build/tmp/deploy/images/bryton-rider-860/u-boot-sunxi-with-spl.bin
 ```
 
 Flashing U-Boot on emmc
